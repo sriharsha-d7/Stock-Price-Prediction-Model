@@ -1,0 +1,17 @@
+[project]
+name = "stock-forecast"
+version = "0.2.0"
+description = "Leak-free next-day stock forecasting with honest baselines"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scikit-learn>=1.4", "scipy>=1.11", "matplotlib>=3.8", "yfinance>=0.2.40"]
+
+[project.optional-dependencies]
+lstm = ["keras>=3", "tensorflow>=2.16"]
+dev = ["pytest>=8", "tabulate>=0.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
